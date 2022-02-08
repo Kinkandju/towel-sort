@@ -1,5 +1,8 @@
+// You should implement your task here.
+
 module.exports = function towelSort(matrix) {
 	let newMatrix = [];
+    
 	// undefined является свойством глобального объекта, то есть, это переменная в глобальной области видимости.
 	// Начальным значением undefined является примитивное значение undefined.
 	if (matrix === undefined || matrix.length === 0) {
@@ -7,9 +10,9 @@ module.exports = function towelSort(matrix) {
 	}
 
 	for (let i = 0; i < matrix.length; i++) {
+		// Метод reverse() на месте обращает порядок следования элементов массива.
+		// Первый элемент массива становится последним, а последний — первым.
 		if (i % 2 !== 0) {
-            // Метод reverse() на месте обращает порядок следования элементов массива.
-		    // Первый элемент массива становится последним, а последний — первым.
 			newMatrix.push(matrix[i].reverse());
 		} else if (i % 2 === 0) {
 			newMatrix.push(matrix[i]);
